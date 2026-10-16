@@ -1,0 +1,222 @@
+:root {
+  --primary-color: #0ea5e9; 
+  --text-dark: #1f2937;
+  --text-light: #4b5563;
+  --bg-light: #f9fafb;
+  --white: #ffffff;
+  --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  color: var(--text-dark);
+  line-height: 1.5;
+  background-color: var(--white);
+}
+
+.hero {
+  position: relative;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem 6rem 2rem;
+  overflow: hidden;
+}
+
+.hero-text-area {
+  background-color: var(--white);
+  padding: 3rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  max-width: 600px;
+  z-index: 2;
+  margin-left: -2rem; /* Creates the overlapping card effect */
+}
+
+.my-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--bg-light);
+  margin-top: -3rem; /* Adjusts the position of the name */
+  margin-left: 2rem;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: serif; /* Matches the classic look in the sample */
+}
+
+.hero-content p {
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+}
+
+.hero-image-container {
+  z-index: 1;
+}
+
+.hero-image {
+  width: 350px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: var(--shadow);
+}
+
+/* Social Icons Styling */
+.social-links {
+  display: flex;
+  gap: 1.2rem;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.social-links a {
+  color: var(--text-dark);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.social-links a:hover {
+  color: var(--primary-color);
+}
+
+/* --- Main / Projects Section --- */
+.projects-section {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.projects-section h2 {
+  font-size: 2rem;
+  font-family: serif;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 0.5rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+.project-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.project-details {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex-grow: 1;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-header h3 {
+  font-size: 1.25rem;
+}
+
+.project-links {
+  display: flex;
+  gap: 0.75rem;
+  font-size: 1.2rem;
+}
+
+.project-links a {
+  color: var(--text-dark);
+}
+
+.project-details p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+/* --- Footer / Contact Section --- */
+.footer {
+  background-color: var(--primary-color);
+  color: var(--white);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5rem 2rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  max-width: 500px;
+}
+
+.contact-info h2 {
+  font-size: 2.5rem;
+  font-family: serif;
+  margin-bottom: 1rem;
+}
+
+.contact-info p {
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+}
+
+.contact-info address {
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contact-info address p {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0;
+}
+
+.footer .social-links {
+  margin-top: 1.5rem;
+}
+
+.footer .social-links a {
+  color: var(--white);
+}
+
+.footer-image img {
+  width: 350px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: var(--shadow);
+}
